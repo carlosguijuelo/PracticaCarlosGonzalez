@@ -20,30 +20,30 @@ public class FactorialTest {
     
     public FactorialTest() {
     }
-    private Factorial instance = new Factorial();
     
     /**
      * Test of calculo method, of class Factorial.
      */
-    @Test 
-    public void testCalculo(){
-        instance.calculo(-1);
+    @Test
+    public void testPrueba() {
+        System.out.println("Prueba 1");
+        int n = 5;
+        int expResult = 120;
+        int result = Factorial.calculo(n);
+        assertEquals(expResult, result);
     }
-    
-    @Test 
-    public void testCalculo1(){
-        instance.calculo(1000000000);
+    @Test(expected= IllegalArgumentException.class )
+        public void testPrueba2() {
+        int n = -1;
+        System.out.println("Prueba 2, Número " + n + " no puede ser < 0");
+        int result = Factorial.calculo(n);
     }
-    
-    @Test 
-    public void testCalculo2(){
-        instance.calculo(5);
-    }
-    
-    @Test 
-    public void testCalculo3(){
-        instance.calculo(1);
-        
+    @Test(expected=ArithmeticException.class )
+        public void testPrueba3() {
+        int n = 32;
+        System.out.println("Prueba 3, Overflow, número " + n + " demasiado grande");
+        int result = Factorial.calculo(n);
+
     }
 }
 

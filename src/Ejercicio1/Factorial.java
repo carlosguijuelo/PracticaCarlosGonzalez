@@ -18,7 +18,7 @@ public class Factorial{
         for( int i = 2; i <= n; i++ ){
             fact *= i;
         }
-        if( fact <= 0 ){ //Es de la unica forma que funcione, sino el overflow no funciona correctamente
+        if( fact < 0 ){
             throw new ArithmeticException("Overflow, número " + n+ " demasiado grande");
         }
         return fact;

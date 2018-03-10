@@ -39,7 +39,8 @@ public class ShapeTest {
         Shape instance = new Shape(1,5.0);
         double expResult = 10.0;
         double result = instance.area();
-        assertEquals(expResult, result, 0.0);
+        boolean estaBien= expResult==result;
+        assertFalse(estaBien);
     }
     
     @Test
@@ -55,7 +56,8 @@ public class ShapeTest {
         Shape instance = new Shape(2,5.0);
         double expResult = 25.0;
         double result = instance.area();
-        assertEquals(expResult, result, 0.0);
+        boolean estaBien= expResult==result;
+        assertFalse(estaBien);
     }
     
     @Test
@@ -71,6 +73,7 @@ public class ShapeTest {
         Shape instance = new Shape(3,5.0);
         double expResult = 25.0;
         double result = instance.area();
-        assertEquals(expResult, result, 0.0);
+        boolean estaBien= expResult==result;
+        assertFalse(estaBien);
     }
 }
